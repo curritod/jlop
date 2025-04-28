@@ -1,6 +1,7 @@
 name: Upload Python Package
 
 on:
+  
   push:
     tags:
       - "[0-9]+.[0-9]+.[0-9]+"
@@ -9,7 +10,7 @@ on:
       - "[0-9]+.[0-9]+.[0-9]+rc[0-9]+"
   
   workflow_dispatch:
-
+  
 env:
   PACKAGE_NAME: "jlop"
   OWNER: "curritod"
