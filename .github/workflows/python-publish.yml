@@ -78,7 +78,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Poetry
+      - name: Install Poetry 
         uses: abatilo/actions-poetry@v2
         with:
           poetry-version: 1.8.2
