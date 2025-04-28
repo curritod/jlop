@@ -1,27 +1,25 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
-[project]
+[tool.poetry]
 name = "jlop"
 version = "0.0.1"
+description = ""
+authors = ["dribeiro"]
+license = "MIT"
 readme = "README.rst"
-authors = [
-  {name = "dribeiro"}
-]
-license = {text = "MIT license"}
-dependencies = [
-  # Add your libraries here. Some typical examples:
-   "numpy >= 1.20",
-   "matplotlib >=3.7"
-]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+numpy = ">=1.20"
+matplotlib = ">=3.7"
+
+[tool.poetry.package]
+include = ["src/**"]
 
 [tool.setuptools]
 package-dir = {"" = "src"}
 
 [tool.setuptools.package-data]
 "*" = ["*.*"]
-
-[tool.poetry.dependencies]
-python = ">=3.8,<4.0"
-
