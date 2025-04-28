@@ -1,25 +1,17 @@
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
 [tool.poetry]
 name = "jlop"
-version = "0.0.1"
-description = ""
-authors = ["dribeiro"]
+version = "0.0.0"
+description = "Just LOvely Plots"
+authors = ["curritod"]
 license = "MIT"
-readme = "README.rst"
+readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4.0"
-numpy = ">=1.20"
-matplotlib = ">=3.7"
+python = "^3.10"
+matplotlib = "^3.10.1"
+numpy = "^2.2.5"
 
-[tool.poetry.package]
-include = ["src/**"]
 
-[tool.setuptools]
-package-dir = {"" = "src"}
-
-[tool.setuptools.package-data]
-"*" = ["*.*"]
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
