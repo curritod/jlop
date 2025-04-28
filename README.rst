@@ -1,5 +1,0 @@
-====
-Jlop
-====
-
-Scientific plot templates
