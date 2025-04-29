@@ -17,18 +17,29 @@ import matplotlib.pyplot as plt
 plt._default_errorbar = plt.errorbar
 plt.Axes._default_errorbar = plt.Axes.errorbar
 
+_dkwargs = {
+    'ls': '',
+    'lw': 0.8,
+    'ms': 3.0,
+    'capsize': 2.0,
+}
+
+#Check that only ls is used 
+def __check_ls(**kwargs):
+    if 'linestyle' in kwargs.keys(): 
+        raise ValueError('jlop styles do not support linestyle as a keyword. Use ls instead.')
+
 #Overwrite plt.errorbar()
 def _custom_errorbar(*args, **kwargs):
-    kwargs.setdefault('linestyle', '-') 
-    plt._default_errorbar(*args, **kwargs)  
+    __check_ls(**kwargs)
+    nkwargs = {**_dkwargs, **kwargs}
+    plt._default_errorbar(*args, **nkwargs)  
 
 #Overwrite axex.errorbar()
 def _custom_ax_errorbar(self, *args, **kwargs):
-    kwargs.setdefault('linestyle', '') 
-    kwargs.setdefault('lw', 0.8)
-    kwargs.setdefault('ms', 3.0)
-    kwargs.setdefault('capsize', 2.0)  
-    self._default_errorbar(*args, **kwargs)  
+    __check_ls(**kwargs)
+    nkwargs = {**_dkwargs, **kwargs}
+    self._default_errorbar(*args, **nkwargs)  
 
 plt.errorbar = _custom_errorbar
 plt.Axes.errorbar = _custom_ax_errorbar
