@@ -5,6 +5,8 @@ def set_colorcycle(name='default'):
 	if name == 'default':
 		# 
 		color_cycle = ['ffff00','ff6500','dc0000','ff0097','360097','0000ca','0097ff','00a800','006500','653600','976536','b9b9b9','868686','454545','000000']
+	elif name =='titipipi':
+		color_cycle = ['#4A4842', '#56a8d5', '#5b8c5a', '#dc851f', '#c45845']
 	elif name == 'catppuccin':
 		#
 		color_cycle = ['8caaee', 'ef9f76', 'a6d189', 'e78284', 'ca9ee6', 'ea999c', 'f4b8e4', 'f2d5cf', '81c8be', 'babbf1']
