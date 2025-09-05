@@ -2,26 +2,33 @@ import os
 import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
 
+from .colors import set_colorcycle
+
 REGISTRY_STYLES = {
 	'modern': {
 		'font'  : 'TexGyreHero/texgyreheros-regular.otf',
 		'style' : 'default.mplstyle',
+		'color' : 'secam',
 	},
 	'classic': {
-	'font'  : 'BaKoMa/cmr10.ttf',
-	'style' : 'default.mplstyle',
+		'font'  : 'BaKoMa/cmr10.ttf',
+		'style' : 'default.mplstyle',
+		'color' : 'pc-88',
 	},
 	'retro': {
-	'font'  : 'Hershey-Noialles/Hershey-Noailles-Times-Simplex-Light.ttf',
-	'style' : 'default.mplstyle',
+		'font'  : 'Hershey-Noialles/Hershey-Noailles-Times-Simplex-Light.ttf',
+		'style' : 'default.mplstyle',
+		'color' : 'pc-88',
 	},
 	'futuristic':{
 		'font'  : 'KulimPark/KulimPark-Regular.ttf',
 		'style' : 'default.mplstyle',
+		'color' : 'pc-88',
 	},
 	'handwritten': {
 		'font': 'Pecita/Pecita.otf',
 		'style' : 'default.mplstyle',
+		'color' : 'catppuccin',
 	}
 }
 
@@ -33,7 +40,7 @@ def set_style(style):
 
 	set_font(REGISTRY_STYLES[style]['font'])
 	set_mplstyle(REGISTRY_STYLES[style]['style'])
-
+	set_colorcycle(REGISTRY_STYLES[style]['color'])
 	return 
 
 def set_font(font_file):
