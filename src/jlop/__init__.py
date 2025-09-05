@@ -44,3 +44,5 @@ def _custom_ax_errorbar(self, *args, **kwargs):
 plt.errorbar = _custom_errorbar
 plt.Axes.errorbar = _custom_ax_errorbar
 
+set_style('modern')
+
