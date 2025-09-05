@@ -9,16 +9,13 @@ on:
       - "[0-9]+.[0-9]+.[0-9]+b[0-9]+"
       - "[0-9]+.[0-9]+.[0-9]+rc[0-9]+"
   workflow_dispatch:
-<<<<<<< HEAD
-  
-=======
+
     inputs:
       tag_name:
         description: "Tag name to release (e.g., 1.2.3)"
         required: false
         type: string
 
->>>>>>> 286bc4e1bb37ed1521e322bceec16f844a7a7ce3
 env:
   PACKAGE_NAME: "jlop"
   OWNER: "curritod"
