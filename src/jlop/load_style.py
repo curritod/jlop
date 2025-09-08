@@ -8,7 +8,7 @@ REGISTRY_STYLES = {
 	'modern': {
 		'font'  : 'TexGyreHero/texgyreheros-regular.otf',
 		'style' : 'default.mplstyle',
-		'color' : 'secam',
+		'color' : 'default',
 	},
 	'classic': {
 		'font'  : 'BaKoMa/cmr10.ttf',

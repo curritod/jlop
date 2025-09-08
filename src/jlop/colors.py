@@ -3,8 +3,7 @@ import matplotlib as mpl
 def set_colorcycle(name='default'):
 	
 	if name == 'default':
-		# 
-		color_cycle = ['ffff00','ff6500','dc0000','ff0097','360097','0000ca','0097ff','00a800','006500','653600','976536','b9b9b9','868686','454545','000000']
+		color_cycle = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
 	elif name =='titipipi':
 		color_cycle = ['#4A4842', '#56a8d5', '#5b8c5a', '#dc851f', '#c45845']
 	elif name == 'catppuccin':
