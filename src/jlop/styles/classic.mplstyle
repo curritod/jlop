@@ -30,7 +30,7 @@ font.size   :  8
 # LATEX
 #
 
-text.usetex	 : False
+text.usetex	 : True
 mathtext.fontset : cm
 axes.formatter.use_mathtext : True
 
