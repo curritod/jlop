@@ -1,34 +1,35 @@
 import os
 import matplotlib.font_manager as fm
 import matplotlib.pyplot as plt
+import matplotlib as mpl
 
 from .colors import set_colorcycle
 
 REGISTRY_STYLES = {
 	'modern': {
 		'font'  : 'TexGyreHero/texgyreheros-regular.otf',
-		'style' : 'default.mplstyle',
-		'color' : 'secam',
+		'style' : 'modern.mplstyle',
+		'color' : 'ibm',
 	},
 	'classic': {
 		'font'  : 'BaKoMa/cmr10.ttf',
-		'style' : 'default.mplstyle',
-		'color' : 'pc-88',
+		'style' : 'classic.mplstyle',
+		'color' : 'ibm',
 	},
 	'retro': {
 		'font'  : 'Hershey-Noialles/Hershey-Noailles-Times-Simplex-Light.ttf',
-		'style' : 'default.mplstyle',
-		'color' : 'pc-88',
+		'style' : 'retro.mplstyle',
+		'color' : 'hoyce',
 	},
 	'futuristic':{
 		'font'  : 'KulimPark/KulimPark-Regular.ttf',
 		'style' : 'default.mplstyle',
-		'color' : 'pc-88',
+		'color' : 'hoyce',
 	},
 	'handwritten': {
 		'font': 'Pecita/Pecita.otf',
 		'style' : 'default.mplstyle',
-		'color' : 'catppuccin',
+		'color' : 'prism',
 	}
 }
 
@@ -38,9 +39,14 @@ def set_style(style):
 	if style not in REGISTRY_STYLES:
 		raise ValueError(f'No style named {style}. Avaliable styles are {REGISTRY_STYLES.keys()}')
 
+	#Reset default values
+	set_mplstyle('default.mplstyle')
+
+	#Setup style
 	set_font(REGISTRY_STYLES[style]['font'])
 	set_mplstyle(REGISTRY_STYLES[style]['style'])
 	set_colorcycle(REGISTRY_STYLES[style]['color'])
+
 	return 
 
 def set_font(font_file):
