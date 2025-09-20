@@ -25,11 +25,15 @@ ytick.labelsize     :  8.0
 
 #GRID
 axes.grid       :   False    
+grid.color      :   b0b0b0    
+grid.linestyle  :   -.        
+grid.linewidth  :   0.3           
+grid.alpha      :   1.0  
 
 #LEGEND
 legend.framealpha   	:   1.0         
 legend.fancybox     	:   False       
-legend.fontsize		:   9
+legend.fontsize		:   7.5
 
 #SCATTER PLOTS                                                       
 scatter.marker		: o         
