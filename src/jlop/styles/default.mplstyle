@@ -4,7 +4,7 @@
 
 #DISPLAY
 figure.figsize	:     3.375 , 2.50  
-figure.dpi      :     500
+figure.dpi      :     300
 
 #LINES
 lines.linewidth : 1.3        
