@@ -3,22 +3,27 @@
 #--------------------
 
 # LINES 
-lines.linewidth : 0.8     
+lines.linewidth : 0.5     
 lines.linestyle : -          
-lines.markersize : 0.6
+lines.markersize : 4.6
+scatter.marker: s 
+scatter.edgecolors: None
 
 # FONTS AND TEXT
-font.size   :  8         
+font.size   :  7        
 legend.fontsize		:   7
 font.weight:  100
 
 # AXES
-axes.linewidth: 0.2
-axes.titlesize: 8
-xtick.major.width:   0.2 
-xtick.minor.width:   0.2     
-ytick.major.width:   0.2 
-ytick.minor.width:   0.2
+axes.linewidth: 0.5
+axes.titlesize: 7
+axes.labelsize : 7
+xtick.labelsize:7
+ytick.labelsize:7
+xtick.major.width:   0.5 
+xtick.minor.width:   0.5     
+ytick.major.width:   0.5 
+ytick.minor.width:   0.5
 
 #LEGEND
 legend.frameon:       False

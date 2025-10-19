@@ -21,6 +21,11 @@ REGISTRY_STYLES = {
 		'style' : 'retro.mplstyle',
 		'color' : 'hoyce',
 	},
+	'idl': {
+		'font'  : 'Hershey-Noialles/Hershey_Roman_Simplex.ttf',
+		'style' : 'retro.mplstyle',
+		'color' : 'hoyce',
+	},
 	'futuristic':{
 		'font'  : 'KulimPark/KulimPark-Regular.ttf',
 		'style' : 'default.mplstyle',
